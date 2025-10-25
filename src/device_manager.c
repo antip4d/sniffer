@@ -27,3 +27,21 @@ int show_devices(pcap_if_t *devices_list)
     }
     return cnt;
 }
+pcap_if_t* select_device(pcap_if_t *devices_list,int d_cnt)
+{
+    int choice; 
+    printf("choose a device ");
+    scanf("%d",&choice);
+    if(choice < 0 || choice >= d_cnt)
+    {
+        printf("ERR");
+        return NULL;
+    }
+    pcap_if_t *tek = devices_list;
+    for(int i = 0; i < choice; i++)
+    {
+        tek = tek->next;
+    }
+
+    return tek;
+}

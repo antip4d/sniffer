@@ -19,6 +19,12 @@ int main()
         printf("not found\n");
     }
     printf("Find devices %d\n", d_cnt);
+    pcap_if_t *selected = select_device(devices,d_cnt);
+    if(selected != NULL)
+    {
+        printf("Selected: %s\n", selected->name);
+    }
+    while(getchar() != '\n');
     printf("Enter...   ");
     getchar();  
     return 0;
