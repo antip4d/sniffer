@@ -1,4 +1,4 @@
-#include "include/pcap.h"
+#include "../include/pcap.h"
 #include <pcap.h>
 
 
@@ -20,7 +20,7 @@ int show_devices(pcap_if_t *devices_list)
         printf("%d %s",cnt, tek->name);
         if(tek->description)
         {
-            printf("- %s", tek->description);
+            printf("- %s\n", tek->description);
         }
         cnt++;
         tek = tek->next;

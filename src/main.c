@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "include/device_manager.h"
+#include "../include/device_manager.h"
 
 int main()
 {
@@ -19,5 +19,7 @@ int main()
         printf("not found\n");
     }
     printf("Find devices %d\n", d_cnt);
+    printf("Enter...   ");
+    getchar();  
     return 0;
 }
