@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "../include/device_manager.h"
+#include "../include/packet_processor.h"
+
 
 int main()
 {
@@ -23,7 +25,10 @@ int main()
     if(selected != NULL)
     {
         printf("Selected: %s\n", selected->name);
+        printf("Starting packet capture\n");
+        start_capture(selected);
     }
+    pcap_freealldevs(devices);
     while(getchar() != '\n');
     printf("Enter...   ");
     getchar();  

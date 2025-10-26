@@ -1,5 +1,6 @@
+#include "../include/device_manager.h"  
 #include "../include/pcap.h"
-#include <pcap.h>
+#include <stdio.h>
 
 
 int get_devices(pcap_if_t **devices_list, char *errbuf)
